@@ -49,6 +49,10 @@
   -moz-box-sizing: content-box;
   box-sizing: content-box;
 }
+.swiper-container.linear .swiper-wrapper, .swiper-pagination-progress .swiper-pagination-progressbar{
+    transition-timing-function: linear;
+    -webkit-transition-timing-function: linear;
+}
 .swiper-container-android .swiper-slide,
 .swiper-wrapper {
   -webkit-transform: translate3d(0px, 0, 0);

@@ -18,6 +18,7 @@ $(function() {
 		winH = $(window).height();
         _isresponsive = (winW<=responsivePoint)?true:false;
         if(_isresponsive) $('.device_imgWrapp').removeClass('active');
+
 	};
 
     /*==============================*/
@@ -232,7 +233,9 @@ $(function() {
         navText:[' ',' '],
         closeText:	' ',
         history: false,
-        disableScroll: false
+        disableScroll: false,
+        heightRatio: 0.7,
+        widthRatio: 0.7
     });
     }
     
@@ -264,13 +267,15 @@ $(function() {
     
    $('.send').on('click', function(){
        $('.hidden_formCN').addClass('active');
-       $(this).closest('.contact_form').addClass('hiden');       
+       $(this).closest('.contact_form').addClass('hiden');  
+       $('.visible_form').addClass('hiden');
        return false;
    });
     
     $('.okey').on('click', function(){
         $('.hidden_formCN').removeClass('active');
         $('.contact_form').removeClass('hiden');
+        $('.visible_form').removeClass('hiden');
         return false;
     });
     
@@ -279,6 +284,12 @@ $(function() {
             $('.img-animate').css({'transform':'translateY('+(winScr/4.8)+'px)'});
         }
     });
+    
+
+    if(navigator.userAgent.match(/iPhone/i)){
+        $('.cartWrapp ').remove();
+        $('.devices_img img:first-child').remove();
+    }
 
 });
 

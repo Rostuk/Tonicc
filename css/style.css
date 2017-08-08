@@ -2139,7 +2139,7 @@ footer p.p3{color: #5F7481;}
 
 a[href*="tel"]:hover,
 a[href*="mailto"]:hover{
-    opacity: 0.7;
+    opacity: 0.75;
 }
 .news_bn .simple-text br{
     display: none;
